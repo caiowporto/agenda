@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include "interface.h"
 
+#include <stdlib.h>
+
 int exibir_menu() {
     int opcao;
     printf("====== AGENDA DE CONTATOS ======\n");
@@ -13,7 +15,25 @@ int exibir_menu() {
     printf("0 - Sair\n");
     printf("Digite sua opcao: ");
     scanf("%d", &opcao);
-
-
     return opcao;
+}
+
+char** solicitar_contato() {
+    char** contato = malloc(3 * sizeof(char*));
+    char* nome = malloc(80 * sizeof(char));
+    char* telefone = malloc(20 * sizeof(char));
+    char* idade = malloc(10 * sizeof(char));
+
+    printf("Digite o nome do contato:\n");
+    scanf("%s", nome);
+    printf("Digite o telefone do contato:\n");
+    scanf("%s", telefone);
+    printf("Digite a idade do contato:\n");
+    scanf("%s", idade);
+
+    contato[0] = nome;
+    contato[1] = telefone;
+    contato[2] = idade;
+
+    return contato;
 }

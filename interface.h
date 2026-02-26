@@ -7,4 +7,6 @@
 
 int exibir_menu();
 
+char** solicitar_contato();
+
 #endif //AGENDA_INTERFACE_H
