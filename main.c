@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "agenda.h"
 
 int main(void) {
-    printf("Hello, World!\n");
+    init_agenda();
     return 0;
 }
