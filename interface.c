@@ -3,8 +3,17 @@
 //
 #include <stdio.h>
 #include "interface.h"
-
 #include <stdlib.h>
+
+int listar_contatos(agenda_t* agenda) {
+    for (int i = 0; i < agenda->tamanho; i++) {
+        printf("Contato %d:\n", i + 1);
+        printf("Nome: %s\n", agenda->contato[i].nome);
+        printf("Telefone: %s\n", agenda->contato[i].telefone);
+        printf("Idade: %d\n", agenda->contato[i].idade);
+    }
+    return 0;
+}
 
 int exibir_menu() {
     int opcao;
